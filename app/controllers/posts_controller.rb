@@ -17,12 +17,15 @@ class PostsController < ApplicationController
   end
 
   def profile
+    @current_user = current_user.name
+
   end
 
   def setting
   end
 
   def answer
+    
   end
 
   def answer2
