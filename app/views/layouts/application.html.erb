@@ -2,72 +2,80 @@
 <html>
 <div class="container">
   <head>
+    <meta charset="utf-8">
     <title>Yakubutu</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="wrapper">
 
-  <header>
-    <div class="container header-title">
-      <div class="navbar navbar-expand-sm">
-      <a class="eden" href="/">Hazard Drug</a>
-      <div class="collapse navbar-collaps" id="navbarNav">
-　　      <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
-  <!-- <ul class="navbar-nav ml-auto"> -->
-  <!-- ユーザーがログインしていた時の処理 -->
-    <li class="nav-item">
-      <%= link_to "ABOUT", "/posts/about" %>
-    </li>
-      <li class="nav-item">
-      <%= link_to "DASHBOARD", "/posts/dashboard" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "LESSONS", "/posts/lessons" %>
-    </li>
-      <li class="nav-item">
-      <%= link_to "PROFILE", "/posts/profile" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "SETTING",  edit_user_registration_path %> <!-- ログアウトをする -->
-    </li>
-    <li class="nav-item">
-      <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
-    </li>
-  <!-- </ul> -->
-  <% else %>
-  <!-- <ul> -->
-  <!-- ユーザーがログインしていなかった時の処理 -->
-  <li class="nav-item">
-    <%= link_to "LOGIN", new_user_session_path, class: 'post' %> <!-- ログイン画面に移行する -->
-  </li>
-  <li class="nav-item">
-    <%= link_to "SIGNUP", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
-  </li>
-    <li class="nav-item">
-    <%= link_to "ABOUT", "/posts/about" %>
-  </li>
+      <header>
+        <div class="container header-title">
+          <div class="navbar navbar-expand-sm">
+            <a class="eden" href="/">Hazard Drug</a>
+            <div class="collapse navbar-collaps" id="navbarNav">
+              　　 <% if user_signed_in? %>
+              <!-- ユーザーがログインしているか調べる -->
+              <!-- <ul class="navbar-nav ml-auto"> -->
+              <!-- ユーザーがログインしていた時の処理 -->
+              <li class="nav-item">
+                <%= link_to "ABOUT", "/posts/about" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "DASHBOARD", "/posts/dashboard" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "LESSONS", "/posts/lessons" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "PROFILE", "/posts/profile" %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "SETTING",  edit_user_registration_path %>
+                <!-- ログアウトをする -->
+              </li>
+              <li class="nav-item">
+                <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+                <!-- ログアウトをする -->
+              </li>
+              <!-- </ul> -->
+              <% else %>
+              <!-- <ul> -->
+              <!-- ユーザーがログインしていなかった時の処理 -->
+              <li class="nav-item">
+                <%= link_to "LOGIN", new_user_session_path, class: 'post' %>
+                <!-- ログイン画面に移行する -->
+              </li>
+              <li class="nav-item">
+                <%= link_to "SIGNUP", new_user_registration_path, class: 'post' %>
+                <!-- 新規登録画面に移行する -->
+              </li>
+              <li class="nav-item">
+                <%= link_to "ABOUT", "/posts/about" %>
+              </li>
 
-  <!-- </ul> -->
-<% end %>
-</div>
-</div>
-</div>
+              <!-- </ul> -->
+              <% end %>
+            </div>
+          </div>
+        </div>
 
-  </header>
-    <div class="container">
-      <%= yield %>
+      </header>
+      <div class="container">
+        <%= yield %>
+      </div>
+
+      <footer>
+        <p> @2020 tetsuya</p>
+      </footer>
+
     </div>
 
-  <footer>
-      <p> @2020 tetsuya</p>
-  </footer>
-
-</div>
- </body>
+  </body>
 </html>
