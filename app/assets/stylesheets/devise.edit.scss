@@ -5,3 +5,27 @@
 .box a{
   color: white;
 }
+
+.box-email {
+  margin-bottom: 10px;
+}
+
+.password-column{
+  margin-bottom: 10px;
+}
+
+.box-new-password {
+  margin-bottom: 10px;
+}
+
+.box-current-password {
+  margin-bottom: 10px;
+}
+
+.box-email input[type="email"],
+.box-password input[type="password"],
+.box-new-password input[type="password"],
+.box-current-password input[type="password"] {
+  width: 400px;
+  height: 20px;
+}

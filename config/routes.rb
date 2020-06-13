@@ -15,12 +15,6 @@ Rails.application.routes.draw do
   get "/posts/answer", to: "posts#answer"
   get "/posts/answer2", to: "posts#answer2"
   get "/posts/answer3", to: "posts#answer3"
-  get "/posts/answer4", to: "posts#answer4"
-  get "/posts/answer5", to: "posts#answer5"
-  get "/posts/answer6", to: "posts#answer6"
-  get "/posts/answer7", to: "posts#answer7"
-  get "/posts/answer8", to: "posts#answer8"
-  get "/posts/answer9", to: "posts#answer9"
 
   get "/posts/score", to: "posts#score"
   get "/posts/score2", to: "posts#score2"
